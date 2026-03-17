@@ -268,8 +268,6 @@ async function seed() {
     created.forEach(p => { categories[p.category] = (categories[p.category] || 0) + 1; });
     console.log(`\u2705 Seeded ${created.length} proposals across ${Object.keys(categories).length} categories:`);
     Object.entries(categories).sort().forEach(([cat, count]) => console.log(`   ${cat}: ${count} proposals`));
-    console.log("\n   Admin:   admin@janmat.gov.in  / Admin@123");
-    console.log("   Citizen: priya@example.com    / Citizen@123");
 
     await mongoose.disconnect();
   } catch (err) {
