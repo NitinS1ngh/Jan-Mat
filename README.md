@@ -4,7 +4,7 @@ Jan-Mat is a citizen-powered legislative platform that enables everyday citizens
 
 ## 🔗 Live
 - Frontend: [https://jan-mat-delta.vercel.app](https://jan-mat-delta.vercel.app)
-- Backend API: [https://jan-mat-delta.vercel.app](https://jan-mat-delta.vercel.app)
+- Backend API: [https://jan-mat.onrender.com](https://jan-mat.onrender.com)
 
 ## Features
 
