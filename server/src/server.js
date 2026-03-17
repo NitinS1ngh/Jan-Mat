@@ -32,6 +32,10 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send('🚀 JanMat API is running');
+});
+
 // Routes
 const { register, login, me, verifyOtp, resendOtp } = require('./routes/auth');
 const authRouter = express.Router();
