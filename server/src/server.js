@@ -16,7 +16,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5000",
   "http://localhost:5173", // Vite
-  "https://your-frontend.vercel.app"
+  "https://jan-mat-delta.vercel.app"
 ];
 
 app.use(cors({
