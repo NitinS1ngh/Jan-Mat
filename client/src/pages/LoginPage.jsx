@@ -38,14 +38,6 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Demo Credentials */}
-        <div className="bg-navy-50 border border-navy-200 p-3 mb-6 text-xs font-sans text-navy-700">
-          <strong className="font-semibold">Demo credentials:</strong>
-          <span className="ml-2 text-navy-600">Citizen: priya@example.com / Citizen@123</span>
-          <span className="mx-2">|</span>
-          <span className="text-navy-600">Admin: admin@janmat.gov.in / Admin@123</span>
-        </div>
-
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="label">Email Address</label>
