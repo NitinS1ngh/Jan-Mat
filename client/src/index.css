@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #1B263B;
+    --sienna: #E76F51;
+    --offwhite: #F8F9FA;
+    --cream: #F5F0E8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-offwhite font-sans text-navy-800;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy-800 text-white px-5 py-2.5 text-sm font-sans font-semibold tracking-wide border border-navy-800 transition-all duration-200 hover:bg-navy-700 hover:border-navy-700 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-navy-800 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-navy-800 px-5 py-2.5 text-sm font-sans font-semibold tracking-wide border border-navy-800 transition-all duration-200 hover:bg-navy-50 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-navy-800 focus:ring-offset-2;
+  }
+
+  .btn-sienna {
+    @apply bg-sienna-500 text-white px-5 py-2.5 text-sm font-sans font-semibold tracking-wide border border-sienna-500 transition-all duration-200 hover:bg-sienna-600 hover:border-sienna-600 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-sienna-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 p-6 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:border-navy-300 hover:shadow-crisp;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-300 bg-white px-4 py-3 text-sm font-sans text-navy-800 placeholder-gray-400 focus:outline-none focus:border-navy-800 focus:ring-0 transition-colors duration-150;
+  }
+
+  .label {
+    @apply block text-xs font-sans font-semibold uppercase tracking-widest text-navy-600 mb-2;
+  }
+
+  .badge {
+    @apply inline-block px-2.5 py-0.5 text-xs font-sans font-semibold tracking-wide uppercase border;
+  }
+
+  .badge-active {
+    @apply badge border-navy-200 text-navy-700 bg-navy-50;
+  }
+
+  .badge-top5 {
+    @apply badge border-sienna-200 text-sienna-600 bg-sienna-50;
+  }
+
+  .badge-passed {
+    @apply badge border-green-200 text-green-700 bg-green-50;
+  }
+
+  .badge-rejected {
+    @apply badge border-red-200 text-red-700 bg-red-50;
+  }
+
+  .badge-revision {
+    @apply badge border-amber-200 text-amber-700 bg-amber-50;
+  }
+
+  .badge-discussion {
+    @apply badge border-blue-200 text-blue-700 bg-blue-50;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-label {
+    @apply text-xs font-sans font-semibold uppercase tracking-[0.2em] text-sienna-500 mb-3;
+  }
+}
+
+/* Vote button micro-interactions */
+.vote-btn {
+  transition: all 0.15s ease;
+}
+.vote-btn:hover {
+  transform: translateY(-1px);
+}
+.vote-btn:active {
+  transform: translateY(0px) scale(0.96);
+}
+.vote-btn.voted-up {
+  background-color: #1B263B;
+  color: white;
+  border-color: #1B263B;
+}
+.vote-btn.voted-down {
+  background-color: #E76F51;
+  color: white;
+  border-color: #E76F51;
+}
+
+/* Timeline stepper */
+.timeline-step {
+  position: relative;
+}
+.timeline-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  width: 2px;
+  height: calc(100% - 0.5rem);
+  background: #e5e7eb;
+}
+.timeline-step.completed:not(:last-child)::after {
+  background: #1B263B;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F8F9FA; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1B263B; }
+
+/* Page transitions */
+.page-enter {
+  animation: fadeIn 0.25s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
