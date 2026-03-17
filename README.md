@@ -2,6 +2,10 @@
 
 Jan-Mat is a citizen-powered legislative platform that enables everyday citizens to propose, debate, and advance laws within the framework of the Indian Constitution. The platform uses AI to check proposals against the Basic Structure Doctrine and surfaces the most viable, popular proposals for Parliamentary consideration.
 
+## 🔗 Live
+- Frontend: [https://jan-mat-delta.vercel.app](https://jan-mat-delta.vercel.app)
+- Backend API: [https://jan-mat-delta.vercel.app](https://jan-mat-delta.vercel.app)
+
 ## Features
 
 - **Citizen Proposals**: Any verified citizen can submit a detailed proposal for a new law or policy change.
