@@ -13,14 +13,22 @@ const { startWeeklyJob } = require('./jobs/weeklyAnalysis');
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  "http://localhost:5000",
+  "http://localhost:5173", // Vite
+  "https://your-frontend.vercel.app"
+];
+
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests from any localhost port (Vite may pick 5173, 5174, etc.) + no origin (curl/Postman)
-    if (!origin || /^http:\/\/localhost:\d+$/.test(origin)) return callback(null, true);
-    callback(new Error('Not allowed by CORS'));
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error("Not allowed by CORS"));
   },
   credentials: true,
 }));
+
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
