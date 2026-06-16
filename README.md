@@ -6,6 +6,13 @@ Jan-Mat is a citizen-powered legislative platform that enables everyday citizens
 - Frontend: [https://jan-mat-delta.vercel.app](https://jan-mat-delta.vercel.app)
 - Backend API: [https://jan-mat.onrender.com](https://jan-mat.onrender.com)
 
+## Screenshots
+<img width="1470" height="833" alt="Screenshot 2026-03-17 at 9 38 23 PM" src="https://github.com/user-attachments/assets/2c2e0942-b274-450f-bae9-f8e78bc7c59b" />
+<img width="1470" height="831" alt="Screenshot 2026-03-17 at 9 39 03 PM" src="https://github.com/user-attachments/assets/c55b382a-c3f2-4bc2-ba98-bc3e46bf8885" />
+
+## System Architecture Overview
+<img width="1600" height="1085" alt="Jan-Mat" src="https://github.com/user-attachments/assets/c6b9db67-11d3-4d21-8ae8-1e36cefb2e39" />
+
 ## Features
 
 - **Citizen Proposals**: Any verified citizen can submit a detailed proposal for a new law or policy change.
